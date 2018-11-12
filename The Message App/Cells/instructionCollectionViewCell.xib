@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="instructionCollectionViewCell" customModule="The_Message_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="108"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="332" height="108"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ani-5r-7fz">
+                        <rect key="frame" x="16" y="0.0" width="300" height="44"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yOq-8w-35r">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw5-Rj-Smw">
+                                        <rect key="frame" x="118" y="0.0" width="64" height="22"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t71-Bb-knx">
+                                        <rect key="frame" x="130" y="22" width="40.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yOq-8w-35r" secondAttribute="trailing" id="1Z8-Rg-qcp"/>
+                            <constraint firstItem="yOq-8w-35r" firstAttribute="top" secondItem="ani-5r-7fz" secondAttribute="top" id="H3N-gr-KrP"/>
+                            <constraint firstAttribute="bottom" secondItem="yOq-8w-35r" secondAttribute="bottom" id="ehp-f1-BL5"/>
+                            <constraint firstItem="yOq-8w-35r" firstAttribute="leading" secondItem="ani-5r-7fz" secondAttribute="leading" id="zr8-wQ-ced"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ani-5r-7fz" secondAttribute="bottom" constant="64" id="4Cm-by-YYy"/>
+                <constraint firstAttribute="trailing" secondItem="ani-5r-7fz" secondAttribute="trailing" constant="16" id="5lS-4K-1cv"/>
+                <constraint firstItem="ani-5r-7fz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="nmu-UQ-fOz"/>
+                <constraint firstItem="ani-5r-7fz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tUv-Uv-nUD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="332" height="108"/>
+            <connections>
+                <outlet property="subTtileLabel" destination="t71-Bb-knx" id="qUp-zL-vbw"/>
+                <outlet property="titleLabel" destination="jw5-Rj-Smw" id="sLR-hy-k2f"/>
+            </connections>
+            <point key="canvasLocation" x="203.19999999999999" y="111.54422788605699"/>
+        </collectionViewCell>
+    </objects>
+</document>

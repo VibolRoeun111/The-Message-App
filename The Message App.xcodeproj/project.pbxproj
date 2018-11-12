@@ -13,6 +13,9 @@
 		171F5A4B2199C1770054B55B /* The_Message_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 171F5A492199C1770054B55B /* The_Message_App.xcdatamodeld */; };
 		171F5A4D2199C1790054B55B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 171F5A4C2199C1790054B55B /* Assets.xcassets */; };
 		171F5A502199C1790054B55B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171F5A4E2199C1790054B55B /* LaunchScreen.storyboard */; };
+		171F5A5A2199CB510054B55B /* instructionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F5A582199CB510054B55B /* instructionCollectionViewCell.swift */; };
+		171F5A5B2199CB510054B55B /* instructionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 171F5A592199CB510054B55B /* instructionCollectionViewCell.xib */; };
+		171F5A5D2199CE1A0054B55B /* Introduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171F5A5C2199CE1A0054B55B /* Introduction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		171F5A4C2199C1790054B55B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		171F5A4F2199C1790054B55B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		171F5A512199C1790054B55B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		171F5A582199CB510054B55B /* instructionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instructionCollectionViewCell.swift; sourceTree = "<group>"; };
+		171F5A592199CB510054B55B /* instructionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = instructionCollectionViewCell.xib; sourceTree = "<group>"; };
+		171F5A5C2199CE1A0054B55B /* Introduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 		171F5A412199C1770054B55B /* The Message App */ = {
 			isa = PBXGroup;
 			children = (
+				171F5A5E2199CE210054B55B /* Models */,
+				171F5A572199CB270054B55B /* Cells */,
 				171F5A422199C1770054B55B /* AppDelegate.swift */,
 				171F5A442199C1770054B55B /* ViewController.swift */,
 				171F5A462199C1770054B55B /* Main.storyboard */,
@@ -65,6 +73,23 @@
 				171F5A492199C1770054B55B /* The_Message_App.xcdatamodeld */,
 			);
 			path = "The Message App";
+			sourceTree = "<group>";
+		};
+		171F5A572199CB270054B55B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				171F5A582199CB510054B55B /* instructionCollectionViewCell.swift */,
+				171F5A592199CB510054B55B /* instructionCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		171F5A5E2199CE210054B55B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				171F5A5C2199CE1A0054B55B /* Introduction.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				171F5A502199C1790054B55B /* LaunchScreen.storyboard in Resources */,
+				171F5A5B2199CB510054B55B /* instructionCollectionViewCell.xib in Resources */,
 				171F5A4D2199C1790054B55B /* Assets.xcassets in Resources */,
 				171F5A482199C1770054B55B /* Main.storyboard in Resources */,
 			);
@@ -141,6 +167,8 @@
 				171F5A452199C1770054B55B /* ViewController.swift in Sources */,
 				171F5A4B2199C1770054B55B /* The_Message_App.xcdatamodeld in Sources */,
 				171F5A432199C1770054B55B /* AppDelegate.swift in Sources */,
+				171F5A5A2199CB510054B55B /* instructionCollectionViewCell.swift in Sources */,
+				171F5A5D2199CE1A0054B55B /* Introduction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vibolroeun.The-Message-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vibolroeun.The-Message-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
