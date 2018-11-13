@@ -10,16 +10,20 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet weak var pageControler: UIPageControl!
     let instuction = Store()
 
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var collectionVeiw: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         collectionVeiw.register(UINib(nibName: "instructionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "instructionCell")
+        
+        previousButton.isHidden = true
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -46,17 +50,65 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        var visibleRect = CGRect()
         
+        var visibleRect = CGRect()
         visibleRect.origin = collectionVeiw.contentOffset
         visibleRect.size = collectionVeiw.bounds.size
         
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         
         guard let indexPath = collectionVeiw.indexPathForItem(at: visiblePoint) else { return }
-        print(indexPath[1])
         
-        switch indexPath[1] {
+        switchImageView(index: indexPath[1])
+        if indexPath[1] == 0 {
+            previousButton.isHidden = true
+        }else{
+            previousButton.isHidden = false
+            nextButton.isHidden = false
+            if indexPath[1] == 3 {
+                nextButton.isHidden = true
+            }
+        }
+        
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let pageNumber = Int(targetContentOffset.pointee.x / view.frame.width)
+       
+        pageControler.currentPage = pageNumber
+        
+    }
+    @IBAction func nextButtonPress(_ sender: Any) {
+    
+        if pageControler.currentPage < 3 {
+            previousButton.isHidden = false
+            let index = IndexPath(item: pageControler.currentPage + 1, section: 0)
+            collectionVeiw.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+            switchImageView(index: pageControler.currentPage + 1)
+            
+            pageControler.currentPage += 1
+        }else {
+            nextButton.isHidden = true
+        }
+        
+    }
+    
+    @IBAction func prevousButtonPress(_ sender: Any) {
+        if pageControler.currentPage > 0 {
+            nextButton.isHidden = false
+            let index = IndexPath(item: pageControler.currentPage - 1, section: 0)
+            collectionVeiw.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+            switchImageView(index: pageControler.currentPage - 1)
+            
+            pageControler.currentPage -= 1
+        } else {
+            previousButton.isHidden = true
+        }
+        
+    }
+    
+    func switchImageView(index: Int){
+        switch index {
         case 0:
             
             imageView.image = UIImage(named: "instruction0")
@@ -73,7 +125,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         default:
             break
         }
-        
         
     }
 }

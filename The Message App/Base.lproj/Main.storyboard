@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,11 +31,44 @@
                                                     <constraint firstAttribute="width" secondItem="p7H-j6-axg" secondAttribute="height" multiplier="1:1" id="QPF-rd-Ant"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8su-og-fX1">
+                                                <rect key="frame" x="281" y="0.0" width="31" height="30"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" red="0.13725490200000001" green="0.3411764706" blue="0.51764705879999995" alpha="0.90164811639999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nextButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpV-2m-taL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yck-dt-0rn">
+                                                <rect key="frame" x="8" y="0.0" width="59" height="30"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                <state key="normal" title="Prevoius">
+                                                    <color key="titleColor" red="0.13725490200000001" green="0.3411764706" blue="0.51764705879999995" alpha="0.90164811639999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="prevousButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jE7-L2-OnC"/>
+                                                </connections>
+                                            </button>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="UIF-Id-aeY">
+                                                <rect key="frame" x="132.5" y="237" width="55" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="vwd-be-YvB"/>
+                                                </constraints>
+                                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="currentPageIndicatorTintColor" red="0.93613922599999999" green="0.60458195209999999" blue="0.21284568309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </pageControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="8su-og-fX1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yck-dt-0rn" secondAttribute="trailing" constant="8" symbolic="YES" id="0il-T1-3E8"/>
                                             <constraint firstItem="p7H-j6-axg" firstAttribute="centerX" secondItem="Jq4-4D-R5O" secondAttribute="centerX" id="1hG-10-zkO"/>
                                             <constraint firstItem="p7H-j6-axg" firstAttribute="centerY" secondItem="Jq4-4D-R5O" secondAttribute="centerY" id="3rN-PA-NIy"/>
+                                            <constraint firstItem="8su-og-fX1" firstAttribute="top" secondItem="Jq4-4D-R5O" secondAttribute="top" id="Gna-iP-8gr"/>
+                                            <constraint firstItem="8su-og-fX1" firstAttribute="trailing" secondItem="Jq4-4D-R5O" secondAttribute="trailingMargin" id="LG2-SF-qXG"/>
+                                            <constraint firstAttribute="bottom" secondItem="UIF-Id-aeY" secondAttribute="bottom" id="PMw-8K-Jtw"/>
+                                            <constraint firstItem="UIF-Id-aeY" firstAttribute="centerX" secondItem="Jq4-4D-R5O" secondAttribute="centerX" id="vFA-bh-K8p"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9h-MO-JyY">
@@ -85,13 +117,13 @@
                                                         <rect key="frame" x="0.0" y="137" width="320" height="137"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-aq-dmc">
-                                                                <rect key="frame" x="70" y="48.5" width="180" height="40"/>
+                                                                <rect key="frame" x="70" y="43.5" width="180" height="50"/>
                                                                 <color key="backgroundColor" red="0.13725490200000001" green="0.3411764706" blue="0.51764705879999995" alpha="0.90164811639999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="mJu-1Z-BU3"/>
-                                                                    <constraint firstAttribute="width" constant="180" id="sEx-G7-4xe"/>
+                                                                    <constraint firstAttribute="height" constant="50" id="mJu-1Z-BU3"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="sEx-G7-4xe"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                                                 <state key="normal" title="Start Messaging">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -129,6 +161,8 @@
                         <constraints>
                             <constraint firstItem="dQn-o2-i7w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9gw-Aw-aj8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dQn-o2-i7w" secondAttribute="bottom" id="C1G-fC-14T"/>
+                            <constraint firstItem="yck-dt-0rn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="REf-25-Zdw"/>
+                            <constraint firstItem="yck-dt-0rn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="dFU-pd-ecN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dQn-o2-i7w" secondAttribute="trailing" id="ef1-cl-B3l"/>
                             <constraint firstItem="dQn-o2-i7w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hPK-H2-Ymf"/>
                         </constraints>
@@ -137,6 +171,9 @@
                     <connections>
                         <outlet property="collectionVeiw" destination="MMr-Tx-zaa" id="Q88-xN-FAU"/>
                         <outlet property="imageView" destination="p7H-j6-axg" id="tDi-7b-sdA"/>
+                        <outlet property="nextButton" destination="8su-og-fX1" id="HfZ-1C-NCp"/>
+                        <outlet property="pageControler" destination="UIF-Id-aeY" id="pjI-nd-6Ay"/>
+                        <outlet property="previousButton" destination="yck-dt-0rn" id="fTR-Wv-qmI"/>
                         <outlet property="startButton" destination="ZCD-aq-dmc" id="tty-2B-cNK"/>
                     </connections>
                 </viewController>

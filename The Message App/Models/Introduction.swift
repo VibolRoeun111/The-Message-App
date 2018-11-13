@@ -26,8 +26,8 @@ class Store {
     init() {
         data.append(Introduction(title: "The Messaging App", subTitle: "The World's fastest messaging app. It is freeIntroduction and secure"))
         data.append(Introduction(title: "Fast", subTitle: "Telegram delivers messages faster than any other application"))
-        data.append(Introduction(title: "Fast", subTitle: "Telegram delivers messages faster than any other application"))
-        data.append(Introduction(title: "Fast", subTitle: "Telegram delivers messages faster than any other application"))
+        data.append(Introduction(title: "Free", subTitle: "Telegram is free forever. No ads. No subscription fees"))
+        data.append(Introduction(title: "Powerfull", subTitle: "Telegram has no limits on the size of your chats and media."))
     }
     func getData() -> [Introduction]{
         
